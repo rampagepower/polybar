@@ -40,38 +40,37 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/example]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 100%
-height = 27
-;offset-x = 1%
-;offset-y = 1%
-radius = 6.0
-fixed-center = false
+monitor = ${env:MONITOR:LVDS-1}
+width = 1366
+height = 17
+;offset-x = 0%
+;offset-y = 0%
+radius = 1.0
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2
+line-size = 1
 line-color = #f00
 
 border-size = 1
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+padding-left = 2
+padding-right = 4
 
-module-margin-left = 1
-module-margin-right = 2
+module-margin-left = 2
+module-margin-right = 1
 
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left =
 modules-center = 
-modules-right = filesystem alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-left = powermenu date filesystem alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature
 
-tray-position = left
+tray-position = right
 tray-padding = 3
 ;tray-transparent = true
 ;tray-background = #0063ff
@@ -334,7 +333,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 1
-margin-bottom = 1
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini
